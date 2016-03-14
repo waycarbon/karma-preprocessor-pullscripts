@@ -5,6 +5,7 @@ var pullScripts = function (loggerFactory, config) {
     config = typeof config === 'object' ? config : {};
 
     return function (content, file, done) {
+        file.path = file.path + ".js";      // Append .js since Karma includes HTML as links per default
         process(config, content, logger, done);
     };
 };
