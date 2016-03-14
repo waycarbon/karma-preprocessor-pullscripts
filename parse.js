@@ -17,9 +17,10 @@ var process = module.exports = function (config, content, logger, callback) {
                 urls.push(src);
             } else if (src.match(/^\/\//)) {
                 urls.push('http:' + src);
-            } else {
-		        urls.push(filePrefix + src);
-	        }
+            } else if (!src.match(/^bower_components(.*)/)) {
+                // ignore bower dependencies
+                urls.push(filePrefix + src);
+            }
         }
     });
 
