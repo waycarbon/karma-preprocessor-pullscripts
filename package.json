@@ -1,12 +1,12 @@
 {
   "name": "karma-preprocessor-pullscripts",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "description": "Karma preprocessor that downloads JS files from <script> tags from html",
   "main": "index.js",
   "dependencies": {
     "request": "~2.30.0",
     "async": "~0.2.9",
-    "cheerio": "~0.12.4"
+    "cheerio": "~0.22.0"
   },
   "devDependencies": {
     "mocha": "~1.15.1"
